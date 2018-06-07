@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css" />
+    <link href="css/common.css" rel="stylesheet" />
+    
+		<script>
+			
+		</script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+    	.container{
+    		width: 100%;
+    	}
+    	.container-fluid{
+    		width: 85%;
+    		margin: 0 auto ;
+    		border-bottom: 1px solid #fff;
+    		padding: 50px 0;
+    	}
+    	.navbar{
+    		height:75px;
+    	}
+    	.navbar-default{
+   			background: rgba(0,0,0,0);
+    		border-bottom: 1px solid #000;
+    		transition:1s;
+    	}
+    	.navbar-brand{
+    		margin-top: -10px;
+    	}
+    	.nav{
+    		margin-top: 20px;
+    	}
+    	.navbar-nav li a{
+    		padding: 6px 10px;
+    		border-radius: 14%;
+    	}
+    	.carousel-caption{
+    		top:30%;
+    		left: 10%;
+    		text-align: left;
+    		width: 30%;
+    	}
+    	.carousel-caption h2{
+    		margin-bottom: 20px;
+    	}
+    	.carousel-caption p{
+    		margin-bottom: 30px;
+    	}
+    	.carousel-caption a{
+    		width: 5%;
+    		height: 3%;
+    		border: 1px solid #cccccc;
+    		color: #f5f5f5;
+    		padding: 10px 10px;
+    	}
+    	.left{
+    		left: -5%;
+    	}
+    	.blue{
+    		background: #4169E1;
+    	}
+    	.thumbnail {
+    		border: 0;
+    		border-radius: 0;
+    		padding: 0;
+    	}
+    	.thumbnail img{
+    		width: 100%;
+    	}
+    	.thumbnail h4{
+    		color: #354f66;
+    	}
+    	.thumbnail p{
+    		font-size: 0.8em;
+    		color: #959595;
+    		margin-bottom: 15px;
+    	}
+    	.thumbnail a{
+    		color: #7ed6f3;
+    		font-size: 0.8em;
+    	}
+    	.four{
+    		position: relative;
+    		width: 50%;
+    		overflow: hidden;
+    		padding: 0;
+    		margin: 0;
+    	}
+    	.four img{
+    		transition: 2s;
+    	}
+    	.four:hover img{
+    		transform: scale(1.1);
+    	}
+    	.jieshao{
+    		position: absolute;
+    		top: 25%;
+    		color: #fff;
+    		margin-left: 50px;
+    	}
+    	.jiebtn{
+    		
+    		margin-top: 50px;
+    	}
+    	.jiebtn a{
+    		padding: 15px 13px;
+    		background: #ffffff;
+    		color: #000;
+    	}
+    	footer{
+    		width: 100%;
+    		background: #202122;
+    	}
+    	footer ul{
+    		padding: 0;
+    	}
+    	footer li{
+    		list-style: none;
+    		
+    	}
+    	.lianjie li{
+    		float: left;
+    	}
+    	.tit{
+    		color: #e1e1e1;
+    		font-weight: bold;
+    		margin-bottom: 20px;
+    	}
+    	.content li{
+    		margin: 5px 0;
+    	}
+		.content li a{
+			color: #747373;
+			font-size: 0.9em;
+		}
+		.content p{
+			color: #747373;
+			font-size: 0.9em;
+		}
+		.control{
+			position: absolute;
+			left: 43%;
+			top: 43%;
+		}
+		.caption{
+			margin-top: 1em;
+			margin-left: 1.1em;
+		}
+		.caption{
+			font-size: 1em;
+		}
+		.caption p{
+			font-size: 1em;
+		}
+		.caption a{
+			display: inline-block;
+			margin-bottom: 2em;
+		}
+		.lunbo{
+			position: relative;
+		}
+		.lunbo a:hover{ 
+			text-decoration: none;
+			color: #101010;
+		}
+		.z-btn{
+			font-size: 50px;
+			
+		}
+		#btnL{
+			position: absolute;
+			top: 45%;
+			left: 3%;
+		}
+		#btnR{
+			position: absolute;
+			top: 45%;
+			left: 95%;
+		}
+		.con{
+			width: 1125px;
+			height: 375px;
+			margin: 60px auto;
+		}
+		.jianjie{
+			width: 268px;
+			height: 375px;
+			float: left;
+			
+		}
+		.jianjie h2{
+			color: #1aa1f9;
+			font-weight: bold;
+		}
+		.jianjie h3{
+			color: #fff;
+			margin-bottom: 20px;
+		}
+		.jianjie p{
+			line-height: 30px;
+		}
+		.z-listbox{
+			width: 2000px;
+			padding: 0;
+			height:375px;
+			position: absolute;
+			
+		}
+		.z-listbox li{
+			float: left;
+			margin-right: 20px;
+			width: 256px;
+			height: 375px;
+			background: #fff;
+		}
+		.con-f{
+			margin:45px 20px ;
+		}
+		.con-f h4{
+			font-weight: bold;
+		}
+		.con-f p{
+			line-height: 30px;
+		}
+    </style>
+  </head>
+  <body style="overflow:-Scroll;overflow-x:hidden">
+
+    <!--导航-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+				<a class="navbar-brand" href="#"><img src="img/logo.png"/></a>
+			</div>
+		
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right" id="daohan">
+					<li>
+						<a href="#">首页 <span class="sr-only">(current)</span></a>
+					</li>
+					<li>
+						<a href="#">生物质热水炉</a>
+					</li>
+					<li>
+						<a href="#">生物质热风炉</a>
+					</li>
+					<li>
+						<a href="produce.html">产品中心</a>
+					</li>
+					<li>
+						<a href="aboutme.html">关于我们</a>
+					</li>
+					<li>
+						<a href="jinghua.html">技术服务</a>
+					</li>
+					<li>
+						<a href="news.html">新闻中心</a>
+					</li>
+					<li>
+						<a href="callme.html">联系我们</a>
+					</li>
+					<li>
+					<li>
+						<a><img src="img/images/zcall.png"/>&nbsp;400&nbsp;6226&nbsp;807</a>
+					</li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
+	<!--导航结束-->	
+	<!--全屏轮播-->
+	<div id="carousel-example-generic" class="carousel slide " data-ride="carousel" data-0="margin-top:0px;transition:1s" data-150="margin-top:-50px">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox" id="listbox" >
+    <div class="item active" >
+      <img src="img/banner1.png" alt="..."style="width: 100%;">
+      <div class="carousel-caption row  wow fadeInUp" data-wow-duration="1s">
+        <h2>生物质热风炉&nbsp;节能高效</h2>
+        <p>生物质热风炉&nbsp;节能高效生物质热风炉&nbsp;节能高效生物质热风炉&nbsp;节能高效生物质热风炉&nbsp;节能高效</p>
+      	<a href="#">了解更多</a>
+      </div>
+    </div>
+    <div class="item">
+      <img src="img/banner2.png" alt="..." style="width: 100%;">
+      <div class="carousel-caption row wow wow fadeInUp">
+         <h2>生物质热风炉&nbsp;节能高效</h2>
+        <p>生物质热风炉&nbsp;节能高效生物质热风炉&nbsp;节能高效生物质热风炉&nbsp;节能高效生物质热风炉&nbsp;节能高效</p>
+      	<a href="#">了解更多</a>
+      </div>
+    </div>
+    <div class="item">
+      <img src="img/banner3.png" alt="..." style="width: 100%;">
+      <div class="carousel-caption row wow wow fadeInUp">
+         <h2>生物质热风炉&nbsp;节能高效</h2>
+        <p>生物质热风炉&nbsp;节能高效生物质热风炉&nbsp;节能高效生物质热风炉&nbsp;节能高效生物质热风炉&nbsp;节能高效</p>
+      	<a href="#">了解更多</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+	<!--全屏轮播结束-->
+<div data-0="margin-top:0px;transition:1s" data-100="margin-top:-20px">
+	<!--one-->
+		<div class="row" style="background: #fff;">
+		  <div class="col-md-1 col-lg-1" style="background: #fff;height: 550px;"></div>
+		  <div class="col-md-10 col-lg-10" style="background: #fff;" >
+		  	<div class="row" style="margin: 40px 0;">
+		  		<div class="col-md-6 col-lg-6" >
+		  			<h2 style="color: #0e9ef9;font-weight: bold;">ABOUT</h2>
+		  			<h3 style="color: #354f66;margin-bottom: 20px;">祈雅典环保科技有限公司</h3>
+		  			<p style="color: #8a8a8a; font-size: 1em;line-height: 2em; ">祈雅典环保科技有限公司祈雅典环保科技有限公司祈雅典环保科技有限公司祈雅典环保科技有限公司祈雅典环保科技有限公司祈雅典环保科技有限公司祈雅典环保科技有限公司祈雅典环保科技有限公司祈雅典环保科技有限公司祈雅典环保科技有限公司司祈雅典环保科技有限公司祈雅典环保科技有限公司司祈雅典环保科技有限公司祈雅典环保科技有限公司司祈雅典环保科技有限公司祈雅典环保科技有限公司司祈雅典环保科技有限公司祈雅典环保科技有限公司司祈雅典环保科技有限公司祈雅典环保科技有限公司祈雅典环保科技有限公司祈雅典环保科技有限公司祈雅典环保科技有限公司</p>
+		  		</div>
+		  		<div class="col-md-6 col-lg-6" style="margin: 20px 0;">
+		  			<video width="100%" id="myvideo">
+					  <source src="i/movie.ogg" type="video/ogg" />
+					  <source src="i/movie.mp4" type="video/mp4" />
+					  <source src="i/movie.webm" type="video/webm" />
+					</video>
+					<div class="control">
+					    <a href="#" class="btnPlay"><img src="img/play.png"/></a>
+					</div>
+		  		</div>
+		  	</div>
+		  </div>
+		  <div class="col-md-1 col-lg-1" style="background: #fff;height: 550px;"></div>
+		</div>
+	<!--one结束-->
+
+	<!--two-->
+	<div class="container" style="background: #414c5e; height: 565px;">
+		<div class="lunbo">
+			<div class="con">
+				<div class="jianjie">
+					<h2>SOLUTIONS</h2>
+					<h3>解决方案</h3>
+					<p>解决方案解决方案解决方案解决方案解决方案解决方案解决方案解决方案解决方案解决方案解决方案解决方案解决方案解决方案解决方案</p>
+				</div>
+				<div style="width: 828px;height: 375px;overflow: hidden;position: relative;"class="swiper-container .swiper-container-horizontal">
+					<ul class="z-listbox swiper-wrapper" id="z-listbox" style="left: 0px">
+						<li class="swiper-slide">
+							<img src="img/333_01_03.png" width="100%"/>
+							<div class="con-f">
+								<h4>酒店</h4>
+								<p>发动反击肯德基飞机覅尽快答复你多发季节对方的解放军</p>
+								<a href="#">阅读更多&rarr;</a>
+							</div>
+						</li>
+						<li class="swiper-slide">
+							<img src="img/333_01_03.png" width="100%"/>
+							<div class="con-f">
+								<h4>酒店</h4>
+								<p>发动反击肯德基飞机覅尽快答复你多发季节对方的解放军</p>
+								<a href="#">阅读更多&rarr;</a>
+							</div>
+						</li>
+						<li class="swiper-slide">
+							<img src="img/333_01_07.png" width="100%"/>
+							<div class="con-f">
+								<h4>酒店</h4>
+								<p>发动反击肯德基飞机覅尽快答复你多发季节对方的解放军</p>
+								<a href="#">阅读更多&rarr;</a>
+							</div>
+						</li>
+						<li class="swiper-slide">
+							<img src="img/333_01_05.png" width="100%"/>
+							<div class="con-f">
+								<h4>酒店</h4>
+								<p>发动反击肯德基飞机覅尽快答复你多发季节对方的解放军</p>
+								<a href="#">阅读更多&rarr;</a>
+							</div>
+						</li>
+						<li class="swiper-slide">
+							<img src="img/333_01_05.png" width="100%"/>
+							<div class="con-f">
+								<h4>酒店</h4>
+								<p>发动反击肯德基飞机覅尽快答复你多发季节对方的解放军</p>
+								<a href="#">阅读更多&rarr;</a>
+							</div>
+						</li>
+				</ul>
+				</div>
+				
+			</div>
+			
+			<a href="#" id="btnL" class="z-btn swiper-button-prev">&lt;</a>
+			<a href="#" id="btnR" class="z-btn swiper-button-next">&gt;</a>
+		</div>
+	</div>
+	<!--two结束-->
+
+	<!--three-->
+
+		<div class="row" style="background: #cccccc; padding: 20px 0;" >
+		  <div class="col-md-4 col-lg-4"></div>
+		  <div class="col-md-4 col-lg-4" style="text-align: center;">
+		  	<h4 style="color: #0099ff;">NEW PRODUCT</h4>
+		  	<h3 style="color: #0099ff;font-weight: bold;">INTRODUCTION</h3>
+		  	<p style="color: #000;font-weight: bold;">产品介绍</p>
+		  </div>
+		  <div class="col-md-4 col-lg-4"></div>
+		</div>
+	<!--three结束-->
+		
+	<!--four-->
+		<div class="row">
+		  <div class="col-md-6 col-lg-6 four">
+		  	<img src="img/333_17.png"  />
+		  	<div class="jieshao">
+		  		<h4>MEW&nbsp;PRODUCT&nbsp;2017</h4>
+		  		<h4>生物热风炉</h4>
+		  		<p>生物热风炉生物热风炉生物热风炉生物热风</p>
+		  		<div class="jiebtn">
+			  		<a href="#">让我了解更多</a>
+			  	</div>
+		  	</div>
+		 	</div>
+		  <div class="col-md-6 col-lg-6 four">
+		  	<img src="img/333_17.png"  />
+		  	<div class="jieshao">
+		  		<h4>MEW&nbsp;PRODUCT&nbsp;2017</h4>
+		  		<h4>生物热风炉</h4>
+		  		<p>生物热风炉生物热风炉生物热风炉生物热风</p>
+		  		<div class="jiebtn">
+			  		<a href="#">让我了解更多</a>
+			  	</div>
+		  	</div>
+		  </div>
+		</div>
+	
+	<!--four结束-->
+
+	<!--footer-->
+	<footer>
+		<div class="container-fluid">
+			<div class="row" >
+				<div class="col-lg-6 col-md-6">
+					<div class="col-md-3 col-lg-3">
+						<div class="tit">关于祈雅典</div>
+						<div class="content">
+							<ul>
+								<li><a href="">祈雅典公司简介</a></li>
+								<li><a href="">荣誉证书</a></li>
+								<li><a href="">工程案例</a></li>
+								<li><a href="">新闻中心</a></li>
+								<li><a href="">活动中心</a></li>
+								<li><a href="">联系我们</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3">
+						<div class="tit">产品中心</div>
+						<div class="content">
+							<ul>
+								<li><a href="">产品分类</a></li>
+								<li><a href="">产品顾问</a></li>
+								<li><a href="">视频欣赏</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3">
+						<div class="tit">技术服务</div>
+					</div>
+					<div class="col-lg-3 col-md-3">
+						<div class="tit">招商代理</div>
+						<div class="content">
+							<ul>
+								<li><a href="">服务网络</a></li>
+								<li><a href="">招商代理</a></li>
+								<li><a href="">申请代理</a></li>
+								<li><a href="">下载中心</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6">
+					<div class="col-lg-5 col-md-5">
+						<div class="tit">联系我们</div>
+						<div class="content">
+							<p>如果您在产品购买，使用及保养维护等方面有任何问题</p>
+							<p>可拨打服务热线：400-88-88888</p>
+							<p>工程事业部合作专线：138-8888-8888</p>
+						</div>
+					</div>
+					<div class="col-lg-7 col-md-7">
+						<div class="tit">联系我们</div>
+						<ul class="lianjie">
+							<li><a href=""><img src="img/333_04.png" alt="" /></a></li>
+							<li><a href=""><img src="img/333_05.png" alt="" /></a></li>
+							<li><a href=""><img src="img/333_06.png" alt="" /></a></li>
+							<li><a href=""><img src="img/333_07.png" alt="" /></a></li>
+							<li><a href=""><img src="img/333d_03.png" alt="" /></a></li>
+						</ul>
+						<div class="clearfix"></div>
+						<div style="margin: 15px 0;">
+							<div class="col-lg-6 col-md-6" >
+								<img src="img/333ee_03.png" style="width: 100%;"/>
+								<p style="text-align: center;">微信公众号</p>
+							</div>
+							<div class="col-lg-6 col-md-6">
+								<img src="img/333ee_05.png" style="width: 100%;" />
+								<p style="text-align: center;">阿里巴巴</p>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				
+			</div>
+			
+			
+		</div>
+		<div class="container-fluid" style="padding: 0 0 10px; border: 0;">
+			<h5>© 2016 广州市祈雅典环保科技有限公司 粤ICP备18888888号-1 网站地图</h5>
+		</div>
+	</footer>
+	<!--footer结束-->
+</div>	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+    <script src="js/wow.min.js"></script>
+   <script src= "js/skrollr.js"></script>
+   <script src="js/swiper-3.4.2.jquery.min.js"></script>
+  </body>
+</html>
+<script type="text/javascript">
+				/*网页加载完成执行*/
+			$(function(){
+				new WOW().init();
+			})
+			 var height = $(window).height()+"px";
+					var img = $("#listbox div.item img");
+					var list = $('#z-listbox');
+					var btnR = $("#btnR");
+					img.css("height",height); 
+		window.onresize=function(){  
+           var height = $(window).height()+"px";
+					var img = $("#listbox div.item img");
+					var list = $('#z-listbox');
+					var btnR = $("#btnR");
+					img.css("height",height);  
+    }  
+	
+ var s =skrollr.init ();
+
+	$(document).ready(function(){
+		 var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'horizontal',
+    slidesPerView:3,
+   	spaceBetween:10,
+   
+    
+    
+    
+    // 如果需要前进后退按钮
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    
+    
+  })        
+ 
+		
+		
+		$(document).scroll(function(){ 
+				
+			var scrolltop=$(this).scrollTop();
+			console.log(scrolltop);
+				if(scrolltop >0){
+					$(".navbar-default").css("background","#fff");
+		 		}else{	
+		 			
+		 			$(".navbar-default").css("background","rgba(0,0,0,0)");
+		 		}
+		 		
+		});
+		
+	
+	
+		
+ 		var video = $('#myvideo');
+
+ 
+
+
+  $('.btnPlay').on('click', function() {
+     if(video[0].paused) {
+        video[0].play();
+        $('.btnPlay img').css("display","none");
+        video.attr("controls","controls");
+     }
+     else {
+        video[0].pause();
+        $('.btnPlay img').css("display","block");
+     }
+     return false;
+ });
+		
+	})
+		
+</script>

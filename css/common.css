@@ -1,0 +1,91 @@
+*{
+	font-family: "微软雅黑";
+}
+a,a:hover,a:active,a:link{
+	text-decoration: none;
+}
+.z-active {
+	border-bottom: 3px solid #000000; 
+}
+.container{
+	width: 100%;
+}
+.container-fluid{
+	width: 85%;
+	margin: 0 auto ;
+	border-bottom: 1px solid #fff;
+	padding: 50px 0;
+}
+.navbar{
+	height:75px;
+	margin: 0;
+}
+.navbar-default{
+	background:#fff;
+	border-bottom: 0px;
+}
+.navbar-brand{
+	margin-top: -10px;
+}
+.nav{
+	margin-top: 20px;
+}
+.navbar-nav li a{
+	padding: 6px 10px;
+	border-radius: 14%;
+}
+.navbar-nav li:last-child{
+	border-left: 1px solid #e0e0e0;
+}
+.navbar-nav li:last-child a{
+	color: #ff6a01;
+	font-weight: bold;
+	font-size: 20px;
+}
+.jumbotron{
+	padding: 0;
+	margin: 0;
+}
+footer{
+	width: 100%;
+	background: #202122;
+}
+footer ul{
+	padding: 0;
+}
+footer li{
+	list-style: none;
+}
+.lianjie li{
+	float: left;
+}
+.tit{
+	color: #e1e1e1;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.content li{
+	margin: 5px 0;
+}
+.content li a{
+	color: #747373;
+	font-size: 0.9em;
+}
+.content p{
+	color: #747373;
+	font-size: 0.9em;
+}
+.jumbotron{
+	text-align: center;
+	position: relative;
+}
+.jumuli{
+   	position: absolute;
+   	top: 35%;
+   	margin:0 15%;
+   	color: #fff;
+}
+.jumuli p{
+  	font-size: 14px;
+   	line-height: 30px;
+}
